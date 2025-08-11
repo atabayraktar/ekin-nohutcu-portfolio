@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "image": "/images/game-imgs/lick-runner.webp",
+      "image": "/images/game-imgs/lick-runner.png",
       "title": "LICK RUNNER",
       "description": "Lick your way through the feast but be careful, you need to roll your tongue back at the right moment because some of the stuff on the table is definitely not for human consumption...",
       "usedTech": "Unity C# IOS",
@@ -9,6 +9,137 @@
       "playStoreLink": "-",
       "link": "-",
       "youtubeLink": "https://www.youtube.com/watch?v=dZ6hErFt5E0"
+    },
+    {
+      "image": "/images/game-imgs/colordrobe.png",
+      "title": "COLORDROBE",
+      "description": "Time to organize your wardrobe! Drag and drop the clothes in the right order to create a beautiful gradient. Make sure everything is in its right place to complete the levels. Organize the entire house! ",
+      "usedTech": "Unity C# IOS",
+      "appStoreLink": "https://apps.apple.com/tr/app/colordrobe/id1636867151?l=tr",
+      "playStoreLink": "-",
+      "link": "-",
+      "youtubeLink": "https://www.youtube.com/shorts/1LuBL_Y1iAw?feature=share"
+    },
+    {
+      "image": "/images/game-imgs/boulder-push.png",
+      "title": "BOULDER PUSH",
+      "description": "Push your boulder all the way up the mountain. Tap and hold to push but be careful, if you stress yourself too hard you have to start over. Earn money by pushing the boulder and spend it on upgrades to push it further and faster. A sisyphean task awaits, can you reach the peak?",
+      "usedTech": "Unity C# IOS",
+      "appStoreLink": "https://apps.apple.com/tr/app/boulder-push/id1617632458?l=tr",
+      "playStoreLink": "-",
+      "link": "-",
+      "youtubeLink": "-"
+    },
+    {
+      "image": "/images/game-imgs/looking-good.png",
+      "title": "LOOKING GOOD",
+      "description": "Choose your own face. Avoid obstacles and collect face features of your preference. You can change your hair, grow a beard or get a tattoo on your face.Lets have the face of your dreams!",
+      "usedTech": "Unity C# IOS",
+      "appStoreLink": "https://apps.apple.com/tr/app/looking-good/id1598730944?l=tr",
+      "playStoreLink": "-",
+      "link": "-",
+      "youtubeLink": "https://drive.google.com/file/d/1FyuUZa5QB6B0nK62Y90dzKhlogLCqe5V/view"
+    },
+    {
+      "image": "/images/game-imgs/plinko-king.png",
+      "title": "PLINKO KING",
+      "description": "Pick your board and make some money! Move the board left and right to make as much money as possible. You'll need to consider your board's layout to get the maximum amount of balls and cash. Can you become a millionaire?",
+      "usedTech": "Unity C# IOS",
+      "appStoreLink": "https://apps.apple.com/tr/app/plinko-king/id1606399922?l=tr",
+      "playStoreLink": "-",
+      "link": "-",
+      "youtubeLink": "https://drive.google.com/file/d/1ochPbqTaQMBBjIuYI0FVg4cQ4uI76Ljq/view"
+    },
+    {
+      "image": "/images/game-imgs/plinko-king.png",
+      "title": "LAYER BREAKER",
+      "description": "Tap on the layers to break them piece by piece. Upgrade to break them even faster. Place new fingers to do the breaking for you. Can you reach the bottom?",
+      "usedTech": "Unity C# IOS",
+      "appStoreLink": "https://apps.apple.com/tr/app/layer-breaker/id1640032160?l=tr",
+      "playStoreLink": "-",
+      "link": "-",
+      "youtubeLink": "https://drive.google.com/file/d/16pofS7VgOApOoeNglkGKsfW78mOXRyfH/view"
+    },
+    {
+      "image": "/images/game-imgs/art-evolve.png",
+      "title": "ART EVOLVE",
+      "description": "Become an art collector and make some money! Move left and right to evolve your art and sell it at the right point to make lots of money! Can you get to 2099?",
+      "usedTech": "Unity C# IOS",
+      "appStoreLink": "https://apps.apple.com/tr/app/art-evolve/id1612038981?l=tr",
+      "playStoreLink": "-",
+      "link": "-",
+      "youtubeLink": "https://www.youtube.com/watch?v=92mI2PXgZYY"
+    },
+    {
+      "image": "/images/game-imgs/loop-train.png",
+      "title": "LOOP TRAIN",
+      "description": "The train is going round and round, until you tell it not to. Go around the loops and carry passengers and cargo to their destinations to earn money. Unlock new track to explore the world and upgrade your train with cash. Can you unlock everything?",
+      "usedTech": "Unity C# IOS",
+      "appStoreLink": "https://apps.apple.com/tr/app/loop-train/id1631846923?l=tr",
+      "playStoreLink": "-",
+      "link": "-",
+      "youtubeLink": "https://www.youtube.com/watch?v=VklVvjRdsig"
+    },
+    {
+      "image": "/images/game-imgs/draw-higher.png",
+      "title": "DRAW HIGHER",
+      "description": "Can you build the highest tower? Draw your piece and drop them from above to build the highest tower. Upgrade your ink to draw more elaborate pieces and pass checkpoints to save your progress. Reach the top!",
+      "usedTech": "Unity C# IOS",
+      "appStoreLink": "https://apps.apple.com/tr/app/draw-higher/id1637614306?l=tr",
+      "playStoreLink": "-",
+      "link": "-",
+      "youtubeLink": "https://drive.google.com/file/d/1U17MEGl-609XCzD10rTSkuBMTU3Ur16o/view"
+    },
+    {
+      "image": "/images/game-imgs/stock-in-time.png",
+      "title": "STOCK IN TIME",
+      "description": "Ever wished you can travel through time and become rich? Buy stocks at various companies and travel through time to sell them at their peak. Become a self made millionaire with your time machine!",
+      "usedTech": "Unity C# IOS",
+      "appStoreLink": "https://apps.apple.com/tr/app/stock-in-time/id1615403249?l=tr",
+      "playStoreLink": "-",
+      "link": "-",
+      "youtubeLink": "https://drive.google.com/file/d/1S3wA32m8cUhWrpQk0l0ldwPFM5b6jE4Y/view"
+    },
+    {
+      "image": "/images/game-imgs/home-development.png",
+      "title": "HOME DEVELOPMENT",
+      "description": "Time to start your own real estate empire! Collect cash and develop houses on the way. Make sure to place the houses in the right spots to maximize your profits. Can you become a billionaire?",
+      "usedTech": "Unity C# IOS",
+      "appStoreLink": "https://apps.apple.com/tr/app/home-development/id1612456299?l=tr",
+      "playStoreLink": "-",
+      "link": "-",
+      "youtubeLink": "https://www.youtube.com/watch?v=ktFdb5oyBIs"
+    },
+    {
+      "image": "/images/game-imgs/categorize-it.png",
+      "title": "CATEGORIZE IT",
+      "description": "You need to categorize all the objects. Look at the category above and draw a circle around the objects that fit in that category. Watch out for curveballs!",
+      "usedTech": "Unity C# IOS",
+      "appStoreLink": "https://apps.apple.com/tr/app/categorize-it/id1630385869?l=tr",
+      "playStoreLink": "-",
+      "link": "-",
+      "youtubeLink": "https://drive.google.com/file/d/13ZbPGtS3hOc96jGS5S43kD5PpJDpZ_7n/view"
+    },
+    {
+      "image": "/images/game-imgs/bullet-mania.png",
+      "title": "BULLET MANIA",
+      "description": "Upgrade your way to victory. Move left and right to pick the right upgrades for the situation an defeat all enemies to win.",
+      "usedTech": "Unity C# IOS",
+      "appStoreLink": "https://apps.apple.com/tr/app/bullet-mania/id1608196205?l=tr",
+      "playStoreLink": "-",
+      "link": "-",
+      "youtubeLink": "-"
+    },
+    {
+      "image": "/images/game-imgs/vacuum-seal.png",
+      "title": "VACUUM SEAL",
+      "description": "It's time to save some space! Put the items in the bag and vacuum seal it to reduce its size. Be careful though, you might rip the bag and have to start over if you vacuum it too much.",
+      "usedTech": "Unity C# IOS",
+      "appStoreLink": "https://apps.apple.com/tr/app/vacuum-seal/id1552002468?l=tr",
+      "playStoreLink": "-",
+      "link": "-",
+      "youtubeLink": "-"
     }
+
   ]
 }
