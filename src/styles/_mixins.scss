@@ -1,0 +1,16 @@
+@mixin mobile {
+  //mixin for mobile media query
+  @media (max-width: 799px) {
+    @content;
+  }
+}
+@mixin d-flex-center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin d-flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
