@@ -4,6 +4,7 @@
       "image": "/images/game-imgs/lick-runner.webp",
       "title": "LICK RUNNER",
       "description": "Lick your way through the feast but be careful, you need to roll your tongue back at the right moment because some of the stuff on the table is definitely not for human consumption...",
+      "usedTech": "Unity C# IOS",
       "appStoreLink": "https://apps.apple.com/tr/app/lick-runner/id1557687589?l=tr",
       "playStoreLink": "-",
       "link": "-",
