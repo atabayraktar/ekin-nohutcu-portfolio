@@ -148,7 +148,7 @@
       "appStoreLink": "https://apps.apple.com/tr/app/bullet-mania/id1608196205?l=tr",
       "playStoreLink": "-",
       "link": "-",
-      "youtubeLink": "-"
+      "youtubeLink": "https://www.youtube.com/shorts/Q_l0g-D7Eng"
     },
     {
       "image": "/images/game-imgs/vacuum-seal.png",
@@ -272,7 +272,7 @@
     },
     {
       "image": "/images/game-imgs/park-my-car.png",
-      "title": "SWITCH MINER",
+      "title": "PARK MY CAR",
       "description": "Ready to run your very own parking lot? Simply tap where you want the cars to go and the elevator will take them there. Seems simple right? Well, sometimes other cars will be in the way and you'll have to move them.",
       "usedTech": "Unity C# IOS",
       "appStoreLink": "-",
@@ -288,17 +288,7 @@
       "appStoreLink": "-",
       "playStoreLink": "-",
       "link": "-",
-      "youtubeLink": "-"
-    },
-    {
-      "image": "/images/game-imgs/math-head.png",
-      "title": "MATH HEAD",
-      "description": "Are you good at math? - Get the biggest number - Compete with two other players - Get to the finish line",
-      "usedTech": "Unity C# IOS",
-      "appStoreLink": "-",
-      "playStoreLink": "-",
-      "link": "-",
-      "youtubeLink": "-"
+      "youtubeLink": "https://www.youtube.com/watch?v=WsrIwKwu7lA"
     },
     {
       "image": "/images/game-imgs/math-head.png",
@@ -341,7 +331,7 @@
       "youtubeLink": "-"
     },
     {
-      "image": "/images/game-imgs/hit-and-pop.png",
+      "image": "/images/game-imgs/maze-hero.png",
       "title": "MAZE HERO",
       "description": "Labirentte koş ve seviye atlamak için düşmanları yen.Zaferi garantilemek için dövüşleri taktiksel olarak seçin.Yeterince seviye atlayın ve patronu yenebilir ve seviyeyi bitirebilirsiniz.",
       "usedTech": "Unity C# Android",
@@ -358,7 +348,7 @@
       "appStoreLink": "-",
       "playStoreLink": "-",
       "link": "-",
-      "youtubeLink": "-"
+      "youtubeLink": "https://www.youtube.com/watch?v=_Ry9_Xzml50"
     },
     {
       "image": "/images/game-imgs/portal-idle.png",
