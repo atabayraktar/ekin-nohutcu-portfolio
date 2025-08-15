@@ -1,0 +1,25 @@
+.header {
+  width: 100%;
+  padding-top: 32px;
+  .header-content {
+    display: flex;
+    gap: 32px;
+    .header-text {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 100%;
+      color: #ffffff;
+      cursor: pointer;
+      opacity: 0.5;
+      span {
+        color: #ae85f2;
+      }
+      &.active {
+        opacity: 1;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

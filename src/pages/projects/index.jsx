@@ -3,8 +3,8 @@ import fs from "fs";
 import path from "path";
 import Head from "next/head";
 
-import Header from "../components/Header";
-import ProjectCardMini from "../components/ProjectCardMini";
+import Header from "../../components/Header";
+import ProjectCardMini from "../../components/ProjectCardMini";
 
 export default function HomePage({ projects }) {
   const [showGoTop, setShowGoTop] = useState(false);
@@ -24,12 +24,14 @@ export default function HomePage({ projects }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="page-wrapper">
-        <div className="content-wrapper">
-          <Header />
-          <div className="page-title">/projects</div>
-          {projects.map((project) => (
-            <ProjectCardMini key={project.slug} project={project} />
-          ))}
+        <div className="bg-container projects">
+          <div className="content-wrapper">
+            <Header />
+            <div className="page-title">/projects</div>
+            {projects.map((project) => (
+              <ProjectCardMini key={project.slug} project={project} />
+            ))}
+          </div>
         </div>
       </div>
       <a

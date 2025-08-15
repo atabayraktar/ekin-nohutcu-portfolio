@@ -1,0 +1,33 @@
+.home {
+  background-image: url("/images/bg-imgs/home.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+
+  .intro-section {
+    padding-top: 115px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .intro-text {
+      max-width: 600px;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 100%;
+      color: #ffffff;
+      max-width: 530px;
+      span {
+        color: #ae85f2;
+      }
+    }
+    .intro-image {
+      width: 303px;
+      height: 303px;
+      img {
+        width: 303px;
+        height: 303px;
+      }
+    }
+  }
+}
