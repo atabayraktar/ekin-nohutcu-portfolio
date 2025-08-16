@@ -71,7 +71,7 @@
       "youtubeLink": "https://drive.google.com/file/d/1ochPbqTaQMBBjIuYI0FVg4cQ4uI76Ljq/view"
     },
     {
-      "image": "/images/game-imgs/plinko-king.png",
+      "image": "/images/game-imgs/layer-breaker.png",
       "title": "LAYER BREAKER",
       "description": "Tap on the layers to break them piece by piece. Upgrade to break them even faster. Place new fingers to do the breaking for you. Can you reach the bottom?",
       "usedTech": "Unity C# IOS",
@@ -191,7 +191,7 @@
       "youtubeLink": "-"
     },
     {
-      "image": "/images/game-imgs/savior.png",
+      "image": "/images/game-imgs/saviour.png",
       "title": "SAVIOR",
       "description": "It is an adventure game which took place in an ancient world. You have to save the Koi fish and carry him to The Pool of Life.",
       "usedTech": "Unity C# WebGL",
@@ -221,7 +221,7 @@
       "youtubeLink": "-"
     },
     {
-      "image": "/images/game-imgs/poor-piggy.png",
+      "image": "/images/game-imgs/gelin-vs-kaynana.png",
       "title": "GELIN VS KAYNANA",
       "description": "This game was made in  ITU FROST JAM. It is a 2D simple fighter game made for PC. ",
       "usedTech": "Unity C# PC",
@@ -231,7 +231,7 @@
       "youtubeLink": "-"
     },
     {
-      "image": "/images/game-imgs/poor-piggy.png",
+      "image": "/images/game-imgs/unfinished.png",
       "title": "UNFINISHED",
       "description": "THIS PROJECT IS ALSO AN UNFINISHED PROJECT. unfinished project is an exhibition which contains unfinished projects of artists. thank you to all artists who sent me their unfinished works without hesitation. now your works have their world on the internet that they can rest forever",
       "usedTech": "Unity C# WebGL",
@@ -341,7 +341,7 @@
       "youtubeLink": "https://www.youtube.com/watch?v=_Ry9_Xzml50"
     },
     {
-      "image": "/images/game-imgs/portal-idle.png",
+      "image": "/images/game-imgs/knife-fingies.png",
       "title": "KNIFE FINGIES",
       "description": "Becerilerinizi kanıtlama zamanı.Bazı mutfak eşyaları ile küçük başlayın ve değerinizi kanıtlayın.Para kazanın ve becerilerinizi göstermek için bıçağınızı yükseltin.",
       "usedTech": "Unity C# Android",
