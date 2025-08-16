@@ -23,11 +23,24 @@ export default function HomePage({ projects }) {
         <title>Ekin Nohutçu | About Me</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="page-wrapper about-me">
+      <div className="page-wrapper">
         <div className="bg-container about-me">
+          <div className="social-icons">
+            <a href="https://github.com/ekinnohutcu" target="_blank">
+              <img src="/images/icons/github.png" alt="github icon" />
+            </a>
+            <a href="mailto:ekinnohutc@gmail.com" target="_blank">
+              <img src="/images/icons/email.png" alt="email icon" />
+            </a>
+            <a href="https://www.linkedin.com/in/ekinnohutcu/" target="_blank">
+              <img src="/images/icons/linkedin.png" alt="linkedin icon" />
+            </a>
+          </div>
           <div className="content-wrapper">
             <Header />
-            <div className="page-title">/about-me</div>
+            <div className="page-title">
+              <span>/</span>about-me
+            </div>
             <div className="about-me-section">
               <div className="about-me-section-text">Hello, i’m Ekin!</div>
               <br />
@@ -68,61 +81,61 @@ export default function HomePage({ projects }) {
             </div>
             <div className="skills-section">
               <div className="section-header">
-                <h2>#skills</h2>
+                <span>#</span>skills
                 <span className="line"></span>
               </div>
               <div className="skills-container">
-                <div className="skill-item1">
+                <div className="skill-item one">
                   <div className="skill-title">Tools</div>
                   <div className="skill-desc">
                     VSCode, Unity3D, Blender, Figma, Houdini, Git
                   </div>
                 </div>
-                <div className="skill-item2">
+                <div className="skill-item two">
                   <div className="skill-title">Languages</div>
                   <div className="skill-desc">C#, Java, Python, C</div>
                 </div>
-                <div className="skill-item3">
-                  <div className="skill-title">Databases</div>
-                  <div className="skill-desc">PostgreSQL</div>
-                </div>
-                <div className="skill-item4">
+                <div className="skill-item three">
                   <div className="skill-title">Project Management</div>
                   <div className="skill-desc">
                     ClickUp, Trello, Monday, Miro, MS Office, Jİra
                   </div>
                 </div>
-                <div className="skill-item5">
+                <div className="skill-item four">
                   <div className="skill-title">Frameworks & Methodologies</div>
                   <div className="skill-desc">
                     Agile, Waterfall, Kanban, Scrum, Scrumban
                   </div>
                 </div>
+                <div className="skill-item five">
+                  <div className="skill-title">Databases</div>
+                  <div className="skill-desc">PostgreSQL</div>
+                </div>
               </div>
             </div>
             <div className="education-section">
               <div className="section-header">
-                <h2>#education</h2>
+                <span>#</span>education
                 <span className="line"></span>
               </div>
               <div className="education-item">
                 Marmara University | Bachelor Degree on Computer Engineering
               </div>
-              <div className="accomplishments-section">
-                <div className="section-header">
-                  <h2>#accomplishments</h2>
-                  <span className="line"></span>
-                </div>
-                <div className="accomplishments-item">
-                  Foundations of Project Management | Google (July 2025)
-                </div>
-                <div className="accomplishments-item">
-                  Shader Development from Scratch for Unity with Cg | Udemy
-                  (March 2020)
-                </div>
-                <div className="accomplishments-item">
-                  Responsive Web Design | freeCodeCamp (July 2019){" "}
-                </div>
+            </div>
+            <div className="accomplishments-section">
+              <div className="section-header">
+                <span>#</span>accomplishments
+                <span className="line"></span>
+              </div>
+              <div className="accomplishments-item">
+                Foundations of Project Management | Google (July 2025)
+              </div>
+              <div className="accomplishments-item">
+                Shader Development from Scratch for Unity with Cg | Udemy (March
+                2020)
+              </div>
+              <div className="accomplishments-item">
+                Responsive Web Design | freeCodeCamp (July 2019){" "}
               </div>
             </div>
           </div>

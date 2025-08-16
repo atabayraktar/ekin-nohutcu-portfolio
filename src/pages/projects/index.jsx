@@ -25,12 +25,27 @@ export default function HomePage({ projects }) {
       </Head>
       <div className="page-wrapper">
         <div className="bg-container projects">
+          <div className="social-icons">
+            <a href="https://github.com/ekinnohutcu" target="_blank">
+              <img src="/images/icons/github.png" alt="github icon" />
+            </a>
+            <a href="mailto:ekinnohutc@gmail.com" target="_blank">
+              <img src="/images/icons/email.png" alt="email icon" />
+            </a>
+            <a href="https://www.linkedin.com/in/ekinnohutcu/" target="_blank">
+              <img src="/images/icons/linkedin.png" alt="linkedin icon" />
+            </a>
+          </div>
           <div className="content-wrapper">
             <Header />
-            <div className="page-title">/projects</div>
-            {projects.map((project) => (
-              <ProjectCardMini key={project.slug} project={project} />
-            ))}
+            <div className="page-title">
+              <span>/</span>projects
+            </div>
+            <div className="projects-container">
+              {projects.map((project) => (
+                <ProjectCardMini key={project.slug} project={project} />
+              ))}
+            </div>
           </div>
         </div>
       </div>

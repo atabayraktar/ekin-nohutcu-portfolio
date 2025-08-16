@@ -35,6 +35,17 @@ export default function HomePage({ projects }) {
       </Head>
       <div className="page-wrapper">
         <div className="bg-container home">
+          <div className="social-icons">
+            <a href="https://github.com/ekinnohutcu" target="_blank">
+              <img src="/images/icons/github.png" alt="github icon" />
+            </a>
+            <a href="mailto:ekinnohutc@gmail.com" target="_blank">
+              <img src="/images/icons/email.png" alt="email icon" />
+            </a>
+            <a href="https://www.linkedin.com/in/ekinnohutcu/" target="_blank">
+              <img src="/images/icons/linkedin.png" alt="linkedin icon" />
+            </a>
+          </div>
           <div className="content-wrapper">
             <Header />
             <div className="intro-section">
@@ -51,46 +62,50 @@ export default function HomePage({ projects }) {
             <div className="projects-section">
               <div className="section-header">
                 <div className="section-header-left">
-                  <h2>#projects</h2>
+                  <span>#</span>projects
                   <span className="line"></span>
                 </div>
-                <a href="/projects">View all &#126;&#126;&gt; </a>
+                <a className="section-header-right" href="/projects">
+                  View all &#126;&#126;&gt;
+                </a>
               </div>
-              {projects.slice(0, isMobile ? 1 : 3).map((project, index) => (
-                <ProjectCardMini
-                  key={project.slug}
-                  project={project}
-                  onClick={() => {}}
-                />
-              ))}
+              <div className="project-cards">
+                {projects.slice(0, isMobile ? 1 : 3).map((project, index) => (
+                  <ProjectCardMini
+                    key={project.slug}
+                    project={project}
+                    onClick={() => {}}
+                  />
+                ))}
+              </div>
             </div>
             <div className="skills-section">
               <div className="section-header">
-                <h2>#skills</h2>
+                <span>#</span>skills
                 <span className="line"></span>
               </div>
               <div className="skills-container">
-                <div className="skill-item1">
+                <div className="skill-item one">
                   <div className="skill-title">Tools</div>
                   <div className="skill-desc">
                     VSCode, Unity3D, Blender, Figma, Houdini, Git
                   </div>
                 </div>
-                <div className="skill-item2">
+                <div className="skill-item two">
                   <div className="skill-title">Languages</div>
                   <div className="skill-desc">C#, Java, Python, C</div>
                 </div>
-                <div className="skill-item3">
+                <div className="skill-item three">
                   <div className="skill-title">Databases</div>
                   <div className="skill-desc">PostgreSQL</div>
                 </div>
-                <div className="skill-item4">
+                <div className="skill-item four">
                   <div className="skill-title">Project Management</div>
                   <div className="skill-desc">
                     ClickUp, Trello, Monday, Miro, MS Office, Jİra
                   </div>
                 </div>
-                <div className="skill-item5">
+                <div className="skill-item five">
                   <div className="skill-title">Frameworks & Methodologies</div>
                   <div className="skill-desc">
                     Agile, Waterfall, Kanban, Scrum, Scrumban
@@ -100,25 +115,23 @@ export default function HomePage({ projects }) {
             </div>
             <div className="about-me-section">
               <div className="section-header">
-                <h2>#about-me</h2>
+                <span>#</span>about-me
                 <span className="line"></span>
               </div>
-              <div className="about-me-content">
-                <div className="about-me-text">Hello, i'm Ekin!</div>
-                <br />
-                <div className="about-me-text">
-                  Game Developer with 7 years of professional experience in the
-                  gaming industry, including 2 years of leadership as the head
-                  of a procedural modeling team.
-                </div>
-                <div className="about-me-read-more">
-                  <a href="/about">Read More</a>
-                </div>
+              <div className="about-me-text">Hello, i'm Ekin!</div>
+              <br />
+              <div className="about-me-text">
+                Game Developer with 7 years of professional experience in the
+                gaming industry, including 2 years of leadership as the head of
+                a procedural modeling team.
+              </div>
+              <div className="about-me-read-more">
+                <a href="/about-me">Read more →</a>
               </div>
             </div>
             <div className="contact-section">
               <div className="section-header">
-                <h2>#contact</h2>
+                <span>#</span>contact
                 <span className="line"></span>
               </div>
               <div className="contact-content">
@@ -128,12 +141,14 @@ export default function HomePage({ projects }) {
                 </div>
                 <div className="contact-msg-box">
                   <div className="contact-msg-box-title">Message me here</div>
-                  <div className="contact-msg-box-info-container">
-                    <img src="/images/icons/email.png" alt="Contact" />
-                    <div className="contact-msg-box-info">
-                      ekinnohutc@gmail.com
+                  <a href="mailto:ekinnohutc@gmail.com" target="_blank">
+                    <div className="contact-msg-box-info-container">
+                      <img src="/images/icons/email.png" alt="Contact" />
+                      <div className="contact-msg-box-info">
+                        ekinnohutc@gmail.com
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>

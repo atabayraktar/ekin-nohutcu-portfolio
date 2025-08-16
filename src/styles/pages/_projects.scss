@@ -1,0 +1,25 @@
+.projects {
+  background-image: url("/images/bg-imgs/projects.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+
+  .page-title {
+    margin: 55px 0 70px 0;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #ffffff;
+    width: 100%;
+    text-align: start;
+    span {
+      color: #ae85f2;
+    }
+  }
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14.5px;
+  }
+}

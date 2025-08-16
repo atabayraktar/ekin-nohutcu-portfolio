@@ -1,0 +1,156 @@
+.about-me {
+  background-image: url("/images/bg-imgs/about.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+
+  .page-title {
+    margin: 55px 0 70px 0;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #ffffff;
+    width: 100%;
+    text-align: start;
+    span {
+      color: #ae85f2;
+    }
+  }
+  .about-me-section {
+    width: 100%;
+    margin-bottom: 115px;
+    .about-me-section-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 25px;
+      color: #ffffff;
+      max-width: 790px;
+    }
+  }
+  .skills-section {
+    width: 100%;
+    margin-bottom: 100px;
+    .section-header {
+      display: flex;
+      align-items: center;
+      width: 500px;
+      font-size: 32px;
+      color: #fff;
+      margin-bottom: 30px;
+      span {
+        color: #ae85f2;
+      }
+      .line {
+        flex-grow: 1;
+        height: 2px;
+        background: #ae85f2;
+        margin-left: 20px;
+      }
+    }
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      .skill-item {
+        border: 1px solid #abb2bf;
+        .skill-title {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 100%;
+          padding: 8px;
+          border-bottom: 1px solid #abb2bf;
+          color: #ae85f2;
+        }
+        .skill-desc {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 30px;
+          color: #ffffff;
+          padding: 8px;
+        }
+        &.one {
+          width: 260px;
+          height: 140px;
+        }
+        &.two {
+          width: 120px;
+          height: 140px;
+        }
+        &.three {
+          width: 195px;
+          height: 140px;
+        }
+        &.four {
+          width: 270px;
+          height: 140px;
+        }
+        &.five {
+          width: 130px;
+          height: 100px;
+        }
+      }
+    }
+  }
+  .education-section {
+    width: 100%;
+    margin-bottom: 150px;
+    .section-header {
+      display: flex;
+      align-items: center;
+      width: 500px;
+      font-size: 32px;
+      color: #fff;
+      margin-bottom: 30px;
+      span {
+        color: #ae85f2;
+      }
+      .line {
+        flex-grow: 1;
+        height: 2px;
+        background: #ae85f2;
+        margin-left: 20px;
+      }
+    }
+    .education-item {
+      border: 1px solid #abb2bf;
+      padding: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 100%;
+      color: #abb2bf;
+      width: max-content;
+    }
+  }
+  .accomplishments-section {
+    width: 100%;
+    margin-bottom: 250px;
+    .section-header {
+      display: flex;
+      align-items: center;
+      width: 500px;
+      font-size: 32px;
+      color: #fff;
+      margin-bottom: 30px;
+      span {
+        color: #ae85f2;
+      }
+      .line {
+        flex-grow: 1;
+        height: 2px;
+        background: #ae85f2;
+        margin-left: 20px;
+      }
+    }
+    .accomplishments-item {
+      border: 1px solid #abb2bf;
+      padding: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 100%;
+      color: #abb2bf;
+      margin-bottom: 30px;
+      width: max-content;
+    }
+  }
+}
