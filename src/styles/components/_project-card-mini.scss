@@ -1,8 +1,20 @@
 .project-card-mini {
   border: 1px solid #abb2bf;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+  &:hover {
+    border: 1px solid #ae85f2;
+    transform: scale(1.05);
+    .project-card-mini-tech,
+    .project-card-mini-title {
+      border-color: #ae85f2;
+    }
+  }
   .project-card-mini-img {
     width: 330px;
     height: 220px;
+    display: block;
     img {
       width: 330px;
       height: 220px;

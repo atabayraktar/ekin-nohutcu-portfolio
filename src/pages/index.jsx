@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/router";
 import fs from "fs";
 import path from "path";
@@ -6,10 +6,13 @@ import Head from "next/head";
 
 import Header from "../components/Header";
 import ProjectCardMini from "../components/ProjectCardMini";
+import ProjectCardBig from "../components/ProjectCardBig";
 
 export default function HomePage({ projects }) {
   const [showGoTop, setShowGoTop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isClosing, setIsClosing] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -26,6 +29,37 @@ export default function HomePage({ projects }) {
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
+
+  useEffect(() => {
+    if (selectedProject) {
+      const body = document.body;
+      const prevOverflow = body.style.overflow;
+      const prevPaddingRight = body.style.paddingRight;
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
+      if (scrollbarWidth > 0) body.style.paddingRight = `${scrollbarWidth}px`;
+      body.style.overflow = "hidden";
+      return () => {
+        body.style.overflow = prevOverflow;
+        body.style.paddingRight = prevPaddingRight;
+      };
+    }
+  }, [selectedProject]);
+
+  const beginClose = useCallback(() => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setSelectedProject(null);
+      setIsClosing(false);
+    }, 300);
+  }, []);
+
+  useEffect(() => {
+    if (!selectedProject) return;
+    const onKey = (e) => e.key === "Escape" && beginClose();
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [selectedProject, beginClose]);
 
   return (
     <>
@@ -74,7 +108,7 @@ export default function HomePage({ projects }) {
                   <ProjectCardMini
                     key={project.slug}
                     project={project}
-                    onClick={() => {}}
+                    onClick={() => setSelectedProject(project)}
                   />
                 ))}
               </div>
@@ -162,6 +196,25 @@ export default function HomePage({ projects }) {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }}
       ></a>
+      {selectedProject && (
+        <div
+          className={`modal-overlay ${isClosing ? "is-closing" : "is-open"}`}
+          onClick={beginClose}
+        >
+          <div
+            className={`modal-content ${isClosing ? "is-closing" : "is-open"}`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              style={{ cursor: "pointer" }}
+              onClick={beginClose}
+              src="/images/icons/close.png"
+              alt="Close icon"
+            />
+            <ProjectCardBig project={selectedProject} />
+          </div>
+        </div>
+      )}
     </>
   );
 }
