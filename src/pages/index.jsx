@@ -119,7 +119,6 @@ export default function HomePage({ projects }) {
                 <span className="line"></span>
               </div>
               <div className="about-me-text">Hello, i'm Ekin!</div>
-              <br />
               <div className="about-me-text">
                 Game Developer with 7 years of professional experience in the
                 gaming industry, including 2 years of leadership as the head of
@@ -139,17 +138,17 @@ export default function HomePage({ projects }) {
                   I’m interested in freelance opportunities. However, if you
                   have other request or question, don’t hesitate to contact me
                 </div>
-                <div className="contact-msg-box">
-                  <div className="contact-msg-box-title">Message me here</div>
-                  <a href="mailto:ekinnohutc@gmail.com" target="_blank">
+                <a href="mailto:ekinnohutc@gmail.com" target="_blank">
+                  <div className="contact-msg-box">
+                    <div className="contact-msg-box-title">Message me here</div>
                     <div className="contact-msg-box-info-container">
                       <img src="/images/icons/email.png" alt="Contact" />
                       <div className="contact-msg-box-info">
                         ekinnohutc@gmail.com
                       </div>
                     </div>
-                  </a>
-                </div>
+                  </div>
+                </a>
               </div>
             </div>
           </div>

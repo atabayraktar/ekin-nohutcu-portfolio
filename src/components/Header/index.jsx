@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Header() {
@@ -6,18 +7,33 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-content">
-        <div className="header-text" onClick={() => router.push("/")}>
+        <Link
+          href="/"
+          className={`header-text ${router.pathname === "/" ? "active" : ""}`}
+        >
           <span>#</span>
           home
-        </div>
-        <div className="header-text" onClick={() => router.push("/projects")}>
+        </Link>
+
+        <Link
+          href="/projects"
+          className={`header-text ${
+            router.pathname.startsWith("/projects") ? "active" : ""
+          }`}
+        >
           <span>#</span>
           projects
-        </div>
-        <div className="header-text" onClick={() => router.push("/about-me")}>
+        </Link>
+
+        <Link
+          href="/about-me"
+          className={`header-text ${
+            router.pathname.startsWith("/about-me") ? "active" : ""
+          }`}
+        >
           <span>#</span>
           about-me
-        </div>
+        </Link>
       </div>
     </header>
   );

@@ -2,6 +2,7 @@
 const nextConfig = {
   output: "export",
   distDir: "_static",
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;

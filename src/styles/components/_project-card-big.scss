@@ -1,0 +1,145 @@
+.project-card-big {
+  background-color: #343737;
+  border: 1px solid #ae85f2;
+  padding: 20px;
+  width: 500px;
+  height: auto;
+  .project-card-big-container {
+    border: 1px solid #ae85f2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: calc(100% - 30px);
+    .project-card-big-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+    }
+    .project-card-big-image {
+      width: 458px;
+      height: auto;
+    }
+    .project-card-big-info-container {
+      border: 1px solid #ae85f2;
+      padding: 20px;
+      .project-card-big-info-description {
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 25px;
+      }
+      .project-card-big-info-used-tech {
+        display: flex;
+        gap: 5px;
+        margin-bottom: 25px;
+        .project-card-big-info-used-tech-info {
+          font-size: 16px;
+          color: #fff;
+        }
+      }
+      .project-card-big-info-links {
+        display: flex;
+        gap: 15px;
+        .project-card-big-info-links-container {
+          a {
+            display: inline-block;
+            img {
+              width: 32px;
+              height: 32px;
+              transition: transform 0.2s ease-in-out;
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  &.is-open {
+    animation: overlayIn 300ms ease forwards;
+  }
+  &.is-closing {
+    animation: overlayOut 300ms ease forwards;
+  }
+  .modal-content {
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    &.is-open {
+      animation: fadeIn 300ms ease forwards;
+    }
+    &.is-closing {
+      animation: fadeOut 300ms ease forwards;
+    }
+    img[alt="Close icon"] {
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes overlayIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes overlayOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+html {
+  scrollbar-gutter: stable;
+}

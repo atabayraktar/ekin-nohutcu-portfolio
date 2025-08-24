@@ -1,21 +1,47 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import fs from "fs";
 import path from "path";
 import Head from "next/head";
 
 import Header from "../../components/Header";
 import ProjectCardMini from "../../components/ProjectCardMini";
+import ProjectCardBig from "../../components/ProjectCardBig";
 
 export default function HomePage({ projects }) {
   const [showGoTop, setShowGoTop] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isClosing, setIsClosing] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      setShowGoTop(window.scrollY > 100);
-    };
+    const onScroll = () => setShowGoTop(window.scrollY > 100);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (selectedProject) {
+      const { overflow } = document.body.style;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = overflow;
+      };
+    }
+  }, [selectedProject]);
+
+  const beginClose = useCallback(() => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setSelectedProject(null);
+      setIsClosing(false);
+    }, 300);
+  }, []);
+
+  useEffect(() => {
+    if (!selectedProject) return;
+    const onKey = (e) => e.key === "Escape" && beginClose();
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [selectedProject, beginClose]);
 
   return (
     <>
@@ -43,7 +69,13 @@ export default function HomePage({ projects }) {
             </div>
             <div className="projects-container">
               {projects.map((project) => (
-                <ProjectCardMini key={project.slug} project={project} />
+                <div
+                  key={project.slug}
+                  onClick={() => setSelectedProject(project)}
+                  style={{ cursor: "pointer" }}
+                >
+                  <ProjectCardMini project={project} />
+                </div>
               ))}
             </div>
           </div>
@@ -57,6 +89,25 @@ export default function HomePage({ projects }) {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }}
       ></a>
+      {selectedProject && (
+        <div
+          className={`modal-overlay ${isClosing ? "is-closing" : "is-open"}`}
+          onClick={beginClose}
+        >
+          <div
+            className={`modal-content ${isClosing ? "is-closing" : "is-open"}`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              style={{ cursor: "pointer" }}
+              onClick={beginClose}
+              src="/images/icons/close.png"
+              alt="Close icon"
+            />
+            <ProjectCardBig project={selectedProject} />
+          </div>
+        </div>
+      )}
     </>
   );
 }

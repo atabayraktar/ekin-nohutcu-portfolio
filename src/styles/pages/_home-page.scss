@@ -96,7 +96,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 43px 24px;
-      margin-left: 440px;
+      margin: 8px 0 0 440px;
       .skill-item {
         border: 1px solid #abb2bf;
         .skill-title {
@@ -161,9 +161,8 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 26px;
-      letter-spacing: 0%;
       color: #ffffff;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       max-width: 515px;
     }
     .about-me-read-more {
@@ -217,19 +216,28 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 100%;
-        letter-spacing: 0%;
+        line-height: 26px;
         color: #ffffff;
         max-width: 515px;
       }
       .contact-msg-box {
         padding: 16px;
         border: 1px solid #abb2bf;
+        transition: all 0.3s ease-in-out;
+        transform: scale(1);
+        &:hover {
+          transform: scale(1.1);
+          border-color: #ae85f2;
+          .contact-msg-box-title {
+            color: #ae85f2;
+          }
+        }
         .contact-msg-box-title {
           font-weight: 600;
           font-size: 16px;
           line-height: 100%;
           color: #ffffff;
-          margin-bottom: 16;
+          margin-bottom: 16px;
         }
         .contact-msg-box-info-container {
           display: flex;

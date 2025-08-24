@@ -3,8 +3,13 @@
 /.pnp
 .pnp.js
 
-# next.js
+# next.js build cache (custom distDir)
+/_static/
+
+# next.js default build cache (keep in case someone runs with default)
 /.next/
+
+# static export output
 /out/
 
 # production

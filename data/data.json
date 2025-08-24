@@ -5,7 +5,7 @@
       "title": "UAE VIRTUAL EXPERIENCE",
       "description": "The UAE Virtual Experience, an interactive Unity-based platform featuring 360° video, immersive navigation, and spatial audio to showcase the UAE’s landmarks and culture. Led the development of video playback controls, navigation systems, and data-driven location mapping for an engaging user experience.",
       "usedTech": "Unity C# Stream",
-      "appStoreLink": "",
+      "appStoreLink": "-",
       "playStoreLink": "-",
       "link": "-",
       "youtubeLink": "https://drive.google.com/file/d/1ohoyd3oO_SUfbquHq5KpcWZhYBfMqx-3/view?usp=sharing"
@@ -350,6 +350,5 @@
       "link": "-",
       "youtubeLink": "-"
     }
-
   ]
 }
