@@ -11,7 +11,7 @@ export default function Header() {
           href="/"
           className={`header-text ${router.pathname === "/" ? "active" : ""}`}
         >
-          <span>#</span>
+          <span>/</span>
           home
         </Link>
 
@@ -21,7 +21,7 @@ export default function Header() {
             router.pathname.startsWith("/projects") ? "active" : ""
           }`}
         >
-          <span>#</span>
+          <span>/</span>
           projects
         </Link>
 
@@ -31,7 +31,7 @@ export default function Header() {
             router.pathname.startsWith("/about-me") ? "active" : ""
           }`}
         >
-          <span>#</span>
+          <span>/</span>
           about-me
         </Link>
       </div>

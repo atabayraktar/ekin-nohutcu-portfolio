@@ -7,7 +7,7 @@ import Header from "../../components/Header";
 import ProjectCardMini from "../../components/ProjectCardMini";
 import ProjectCardBig from "../../components/ProjectCardBig";
 
-export default function HomePage({ projects }) {
+export default function Projects({ projects }) {
   const [showGoTop, setShowGoTop] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [isClosing, setIsClosing] = useState(false);
@@ -51,15 +51,64 @@ export default function HomePage({ projects }) {
       </Head>
       <div className="page-wrapper">
         <div className="bg-container projects">
-          <div className="social-icons">
-            <a href="https://github.com/ekinnohutcu" target="_blank">
+          <div className="social-icons-desktop">
+            <a
+              href="/ekin-nohutcu-cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/images/icons/cv.svg" alt="CV (PDF)" />
+            </a>
+            <a
+              href="https://github.com/ekinnohutcu"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/images/icons/github.png" alt="github icon" />
             </a>
-            <a href="mailto:ekinnohutc@gmail.com" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/ekinnohutcu/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/images/icons/linkedin.png" alt="linkedin icon" />
+            </a>
+            <a
+              href="mailto:ekinnohutc@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/images/icons/email.png" alt="email icon" />
             </a>
-            <a href="https://www.linkedin.com/in/ekinnohutcu/" target="_blank">
+          </div>
+          <div className="social-icons-mobile">
+            <a
+              href="/ekin-nohutcu-cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/images/icons/cv.svg" alt="CV (PDF)" />
+            </a>
+            <a
+              href="https://github.com/ekinnohutcu"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/images/icons/github.png" alt="github icon" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ekinnohutcu/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/images/icons/linkedin.png" alt="linkedin icon" />
+            </a>
+            <a
+              href="mailto:ekinnohutc@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/images/icons/email.png" alt="email icon" />
             </a>
           </div>
           <div className="content-wrapper">
@@ -69,13 +118,11 @@ export default function HomePage({ projects }) {
             </div>
             <div className="projects-container">
               {projects.map((project) => (
-                <div
-                  key={project.slug}
+                <ProjectCardMini
+                  project={project}
                   onClick={() => setSelectedProject(project)}
-                  style={{ cursor: "pointer" }}
-                >
-                  <ProjectCardMini project={project} />
-                </div>
+                  key={project.slug}
+                />
               ))}
             </div>
           </div>

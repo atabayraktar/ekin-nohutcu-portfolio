@@ -1,49 +1,56 @@
 import { useEffect, useState, useCallback } from "react";
-import { useRouter } from "next/router";
 import fs from "fs";
 import path from "path";
 import Head from "next/head";
-
 import Header from "../components/Header";
 import ProjectCardMini from "../components/ProjectCardMini";
 import ProjectCardBig from "../components/ProjectCardBig";
 
-export default function HomePage({ projects }) {
-  const [showGoTop, setShowGoTop] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [isClosing, setIsClosing] = useState(false);
-  const router = useRouter();
+function useIsMobile(maxWidth = 768) {
+  const [isMobile, setIsMobile] = useState(null);
 
   useEffect(() => {
-    const onScroll = () => {
-      setShowGoTop(window.scrollY > 100);
-    };
+    const mq = window.matchMedia(`(max-width: ${maxWidth}px)`);
+    const update = () => setIsMobile(mq.matches);
+    update();
+    if (mq.addEventListener) {
+      mq.addEventListener("change", update);
+      return () => mq.removeEventListener("change", update);
+    } else {
+      mq.addListener(update);
+      return () => mq.removeListener(update);
+    }
+  }, [maxWidth]);
+
+  return isMobile;
+}
+
+export default function HomePage({ projects }) {
+  const [showGoTop, setShowGoTop] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isClosing, setIsClosing] = useState(false);
+
+  const isMobile = useIsMobile(768);
+
+  useEffect(() => {
+    const onScroll = () => setShowGoTop(window.scrollY > 100);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  useEffect(() => {
-    if (selectedProject) {
-      const body = document.body;
-      const prevOverflow = body.style.overflow;
-      const prevPaddingRight = body.style.paddingRight;
-      const scrollbarWidth =
-        window.innerWidth - document.documentElement.clientWidth;
-      if (scrollbarWidth > 0) body.style.paddingRight = `${scrollbarWidth}px`;
-      body.style.overflow = "hidden";
-      return () => {
-        body.style.overflow = prevOverflow;
-        body.style.paddingRight = prevPaddingRight;
-      };
-    }
+    if (!selectedProject) return;
+    const body = document.body;
+    const prevOverflow = body.style.overflow;
+    const prevPaddingRight = body.style.paddingRight;
+    const scrollbarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+    if (scrollbarWidth > 0) body.style.paddingRight = `${scrollbarWidth}px`;
+    body.style.overflow = "hidden";
+    return () => {
+      body.style.overflow = prevOverflow;
+      body.style.paddingRight = prevPaddingRight;
+    };
   }, [selectedProject]);
 
   const beginClose = useCallback(() => {
@@ -69,15 +76,64 @@ export default function HomePage({ projects }) {
       </Head>
       <div className="page-wrapper">
         <div className="bg-container home">
-          <div className="social-icons">
-            <a href="https://github.com/ekinnohutcu" target="_blank">
+          <div className="social-icons-desktop">
+            <a
+              href="/ekin-nohutcu-cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/images/icons/cv.svg" alt="CV (PDF)" />
+            </a>
+            <a
+              href="https://github.com/ekinnohutcu"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/images/icons/github.png" alt="github icon" />
             </a>
-            <a href="mailto:ekinnohutc@gmail.com" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/ekinnohutcu/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/images/icons/linkedin.png" alt="linkedin icon" />
+            </a>
+            <a
+              href="mailto:ekinnohutc@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/images/icons/email.png" alt="email icon" />
             </a>
-            <a href="https://www.linkedin.com/in/ekinnohutcu/" target="_blank">
+          </div>
+          <div className="social-icons-mobile">
+            <a
+              href="/ekin-nohutcu-cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/images/icons/cv.svg" alt="CV (PDF)" />
+            </a>
+            <a
+              href="https://github.com/ekinnohutcu"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/images/icons/github.png" alt="github icon" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ekinnohutcu/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/images/icons/linkedin.png" alt="linkedin icon" />
+            </a>
+            <a
+              href="mailto:ekinnohutc@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/images/icons/email.png" alt="email icon" />
             </a>
           </div>
           <div className="content-wrapper">
@@ -99,19 +155,28 @@ export default function HomePage({ projects }) {
                   <span>#</span>projects
                   <span className="line"></span>
                 </div>
-                <a className="section-header-right" href="/projects">
+                <a
+                  className="section-header-right desktop-only"
+                  href="/projects"
+                >
                   View all &#126;&#126;&gt;
                 </a>
               </div>
               <div className="project-cards">
-                {projects.slice(0, isMobile ? 1 : 3).map((project, index) => (
-                  <ProjectCardMini
-                    key={project.slug}
-                    project={project}
-                    onClick={() => setSelectedProject(project)}
-                  />
-                ))}
+                {isMobile !== null &&
+                  projects
+                    .slice(0, isMobile ? 1 : 3)
+                    .map((project) => (
+                      <ProjectCardMini
+                        key={project.slug}
+                        project={project}
+                        onClick={() => setSelectedProject(project)}
+                      />
+                    ))}
               </div>
+              <a className="view-all-mobile mobile-only" href="/projects">
+                View all &#126;&#126;&gt;
+              </a>
             </div>
             <div className="skills-section">
               <div className="section-header">
@@ -130,15 +195,31 @@ export default function HomePage({ projects }) {
                   <div className="skill-desc">C#, Java, Python, C</div>
                 </div>
                 <div className="skill-item three">
-                  <div className="skill-title">Databases</div>
-                  <div className="skill-desc">PostgreSQL</div>
-                </div>
-                <div className="skill-item four">
-                  <div className="skill-title">Project Management</div>
+                  <div className="skill-title">
+                    <span className="desktop-only">Databases</span>
+                    <span className="mobile-only">Project Management</span>
+                  </div>
                   <div className="skill-desc">
-                    ClickUp, Trello, Monday, Miro, MS Office, Jİra
+                    <span className="desktop-only">PostgreSQL</span>
+                    <span className="mobile-only">
+                      ClickUp, Trello, Monday, Miro, MS Office, Jira
+                    </span>
                   </div>
                 </div>
+
+                <div className="skill-item four">
+                  <div className="skill-title">
+                    <span className="desktop-only">Project Management</span>
+                    <span className="mobile-only">Databases</span>
+                  </div>
+                  <div className="skill-desc">
+                    <span className="desktop-only">
+                      ClickUp, Trello, Monday, Miro, MS Office, Jira
+                    </span>
+                    <span className="mobile-only">PostgreSQL</span>
+                  </div>
+                </div>
+
                 <div className="skill-item five">
                   <div className="skill-title">Frameworks & Methodologies</div>
                   <div className="skill-desc">
@@ -172,7 +253,11 @@ export default function HomePage({ projects }) {
                   I’m interested in freelance opportunities. However, if you
                   have other request or question, don’t hesitate to contact me
                 </div>
-                <a href="mailto:ekinnohutc@gmail.com" target="_blank">
+                <a
+                  href="mailto:ekinnohutc@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <div className="contact-msg-box">
                     <div className="contact-msg-box-title">Message me here</div>
                     <div className="contact-msg-box-info-container">

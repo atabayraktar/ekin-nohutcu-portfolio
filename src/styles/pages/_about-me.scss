@@ -3,23 +3,29 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100%;
+  @include mobile {
+    background-image: none;
+  }
 
   .page-title {
     margin: 55px 0 70px 0;
     font-weight: 600;
     font-size: 32px;
     line-height: 100%;
-    letter-spacing: 0%;
     color: #ffffff;
     width: 100%;
     text-align: start;
     span {
       color: #ae85f2;
     }
+    @include mobile {
+      font-size: 25px;
+      margin: 50px 0 50px 0;
+    }
   }
   .about-me-section {
     width: 100%;
-    margin-bottom: 115px;
+    margin-bottom: 120px;
     .about-me-section-text {
       font-weight: 400;
       font-size: 16px;
@@ -27,10 +33,17 @@
       color: #ffffff;
       max-width: 790px;
     }
+    @include mobile {
+      margin-bottom: 0;
+    }
   }
   .skills-section {
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
+    @include mobile {
+      padding-top: 50px;
+      margin-bottom: 50px;
+    }
     .section-header {
       display: flex;
       align-items: center;
@@ -46,6 +59,10 @@
         height: 2px;
         background: #ae85f2;
         margin-left: 20px;
+      }
+      @include mobile {
+        width: 100%;
+        font-size: 20px;
       }
     }
     .skills-container {
@@ -53,14 +70,18 @@
       flex-wrap: wrap;
       gap: 10px;
       .skill-item {
+        box-sizing: border-box;
         border: 1px solid #abb2bf;
         .skill-title {
           font-weight: 600;
           font-size: 16px;
           line-height: 100%;
+          color: #ae85f2;
           padding: 8px;
           border-bottom: 1px solid #abb2bf;
-          color: #ae85f2;
+          @include mobile {
+            font-size: 15px;
+          }
         }
         .skill-desc {
           font-weight: 400;
@@ -68,17 +89,21 @@
           line-height: 30px;
           color: #ffffff;
           padding: 8px;
+          @include mobile {
+            font-size: 13px;
+            line-height: 20px;
+          }
         }
         &.one {
-          width: 260px;
+          width: 259px;
           height: 140px;
         }
         &.two {
-          width: 120px;
+          width: 118px;
           height: 140px;
         }
         &.three {
-          width: 195px;
+          width: 210px;
           height: 140px;
         }
         &.four {
@@ -86,15 +111,41 @@
           height: 140px;
         }
         &.five {
-          width: 130px;
+          width: 128px;
           height: 100px;
+        }
+      }
+      @include mobile {
+        margin: 0;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: 1.27fr 1fr;
+        .skill-item,
+        .skill-item.one,
+        .skill-item.two,
+        .skill-item.three,
+        .skill-item.four,
+        .skill-item.five {
+          width: auto !important;
+          height: auto;
+          min-height: 120px;
+        }
+        @media (min-width: 398px) and (max-width: 406px) {
+          grid-template-columns: 150px 118px;
+          width: calc(150px + 118px + 16px);
+          margin-left: auto;
+          margin-right: auto;
+          justify-content: center;
         }
       }
     }
   }
   .education-section {
     width: 100%;
-    margin-bottom: 150px;
+    margin-bottom: 120px;
+    @include mobile {
+      margin-bottom: 50px;
+    }
     .section-header {
       display: flex;
       align-items: center;
@@ -110,6 +161,10 @@
         height: 2px;
         background: #ae85f2;
         margin-left: 20px;
+      }
+      @include mobile {
+        width: 100%;
+        font-size: 20px;
       }
     }
     .education-item {
@@ -121,10 +176,28 @@
       color: #abb2bf;
       width: max-content;
     }
+    @include mobile {
+      .education-item {
+        width: auto;
+        text-align: center;
+      }
+      .education-item .mobile-only {
+        display: block !important;
+      }
+      .education-item .desktop-only {
+        display: none !important;
+      }
+      .education-item-text {
+        font-size: 13px;
+      }
+    }
   }
   .accomplishments-section {
     width: 100%;
     margin-bottom: 250px;
+    @include mobile {
+      margin-bottom: 100px;
+    }
     .section-header {
       display: flex;
       align-items: center;
@@ -141,6 +214,10 @@
         background: #ae85f2;
         margin-left: 20px;
       }
+      @include mobile {
+        width: 100%;
+        font-size: 20px;
+      }
     }
     .accomplishments-item {
       border: 1px solid #abb2bf;
@@ -151,6 +228,21 @@
       color: #abb2bf;
       margin-bottom: 30px;
       width: max-content;
+    }
+    @include mobile {
+      .accomplishments-item {
+        width: auto;
+        text-align: center;
+      }
+      .accomplishments-item .mobile-only {
+        display: block !important;
+      }
+      .accomplishments-item .desktop-only {
+        display: none !important;
+      }
+      .accomplishments-item-text {
+        font-size: 13px;
+      }
     }
   }
 }

@@ -4,6 +4,9 @@
   .header-content {
     display: flex;
     gap: 32px;
+    @include mobile {
+      gap: 20px;
+    }
     .header-text {
       font-size: 16px;
       font-weight: 500;

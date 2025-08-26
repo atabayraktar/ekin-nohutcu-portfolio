@@ -6,7 +6,7 @@ import Head from "next/head";
 import Header from "../../components/Header";
 import ProjectCardMini from "../../components/ProjectCardMini";
 
-export default function HomePage({ projects }) {
+export default function AboutMe({ projects }) {
   const [showGoTop, setShowGoTop] = useState(false);
 
   useEffect(() => {
@@ -25,15 +25,64 @@ export default function HomePage({ projects }) {
       </Head>
       <div className="page-wrapper">
         <div className="bg-container about-me">
-          <div className="social-icons">
-            <a href="https://github.com/ekinnohutcu" target="_blank">
+          <div className="social-icons-desktop">
+            <a
+              href="/ekin-nohutcu-cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/images/icons/cv.svg" alt="CV (PDF)" />
+            </a>
+            <a
+              href="https://github.com/ekinnohutcu"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/images/icons/github.png" alt="github icon" />
             </a>
-            <a href="mailto:ekinnohutc@gmail.com" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/ekinnohutcu/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/images/icons/linkedin.png" alt="linkedin icon" />
+            </a>
+            <a
+              href="mailto:ekinnohutc@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/images/icons/email.png" alt="email icon" />
             </a>
-            <a href="https://www.linkedin.com/in/ekinnohutcu/" target="_blank">
+          </div>
+          <div className="social-icons-mobile">
+            <a
+              href="/ekin-nohutcu-cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/images/icons/cv.svg" alt="CV (PDF)" />
+            </a>
+            <a
+              href="https://github.com/ekinnohutcu"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/images/icons/github.png" alt="github icon" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ekinnohutcu/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src="/images/icons/linkedin.png" alt="linkedin icon" />
+            </a>
+            <a
+              href="mailto:ekinnohutc@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/images/icons/email.png" alt="email icon" />
             </a>
           </div>
           <div className="content-wrapper">
@@ -118,8 +167,14 @@ export default function HomePage({ projects }) {
                 <span>#</span>education
                 <span className="line"></span>
               </div>
-              <div className="education-item">
+              <div className="education-item desktop-only">
                 Marmara University | Bachelor Degree on Computer Engineering
+              </div>
+              <div className="education-item mobile-only">
+                <div className="education-item-text">Marmara University</div>
+                <div className="education-item-text">
+                  Bachelor Degree on Computer Engineering
+                </div>
               </div>
             </div>
             <div className="accomplishments-section">
@@ -127,15 +182,39 @@ export default function HomePage({ projects }) {
                 <span>#</span>accomplishments
                 <span className="line"></span>
               </div>
-              <div className="accomplishments-item">
-                Foundations of Project Management | Google (July 2025)
+              <div className="accomplishments-item desktop-only">
+                Foundations of Project Management | Google (July 2025),
               </div>
-              <div className="accomplishments-item">
+              <div className="accomplishments-item desktop-only">
                 Shader Development from Scratch for Unity with Cg | Udemy (March
                 2020)
               </div>
-              <div className="accomplishments-item">
-                Responsive Web Design | freeCodeCamp (July 2019){" "}
+              <div className="accomplishments-item desktop-only">
+                Responsive Web Design | freeCodeCamp (July 2019)
+              </div>
+              <div className="accomplishments-item mobile-only">
+                <div className="accomplishments-item-text">
+                  Foundations of Project Management
+                </div>
+                <div className="accomplishments-item-text">
+                  Google (July 2025)
+                </div>
+              </div>
+              <div className="accomplishments-item mobile-only">
+                <div className="accomplishments-item-text">
+                  Shader Development for Unity with Cg
+                </div>
+                <div className="accomplishments-item-text">
+                  Udemy (March 2020)
+                </div>
+              </div>
+              <div className="accomplishments-item mobile-only">
+                <div className="accomplishments-item-text">
+                  Responsive Web Design
+                </div>
+                <div className="accomplishments-item-text">
+                  freeCodeCamp (July 2019)
+                </div>
               </div>
             </div>
           </div>
