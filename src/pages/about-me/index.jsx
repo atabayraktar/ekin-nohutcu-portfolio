@@ -1,12 +1,8 @@
 import { useEffect, useState } from "react";
-import fs from "fs";
-import path from "path";
 import Head from "next/head";
-
 import Header from "../../components/Header";
-import ProjectCardMini from "../../components/ProjectCardMini";
 
-export default function AboutMe({ projects }) {
+export default function AboutMe() {
   const [showGoTop, setShowGoTop] = useState(false);
 
   useEffect(() => {
@@ -230,16 +226,4 @@ export default function AboutMe({ projects }) {
       ></a>
     </>
   );
-}
-
-export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), "data", "data.json");
-  const jsonData = fs.readFileSync(filePath, "utf-8");
-  const data = JSON.parse(jsonData);
-
-  return {
-    props: {
-      projects: data.data,
-    },
-  };
 }

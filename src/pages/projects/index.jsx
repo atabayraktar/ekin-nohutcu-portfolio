@@ -1,8 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
-import fs from "fs";
-import path from "path";
 import Head from "next/head";
-
 import Header from "../../components/Header";
 import ProjectCardMini from "../../components/ProjectCardMini";
 import ProjectCardBig from "../../components/ProjectCardBig";
@@ -160,13 +157,14 @@ export default function Projects({ projects }) {
 }
 
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), "data", "data.json");
-  const jsonData = fs.readFileSync(filePath, "utf-8");
-  const data = JSON.parse(jsonData);
+  const fs = require("fs");
+  const path = require("path");
+  const filePath = path.join(process.cwd(), "public", "data.json");
+  const json = JSON.parse(fs.readFileSync(filePath, "utf8"));
 
   return {
     props: {
-      projects: data.data,
+      projects: json.data,
     },
   };
 }
