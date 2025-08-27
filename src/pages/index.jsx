@@ -195,7 +195,6 @@ export default function HomePage({ projects }) {
                     </span>
                   </div>
                 </div>
-
                 <div className="skill-item four">
                   <div className="skill-title">
                     <span className="desktop-only">Project Management</span>

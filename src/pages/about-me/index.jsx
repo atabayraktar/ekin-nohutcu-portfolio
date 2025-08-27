@@ -141,20 +141,34 @@ export default function AboutMe() {
                   <div className="skill-desc">C#, Java, Python, C</div>
                 </div>
                 <div className="skill-item three">
-                  <div className="skill-title">Project Management</div>
+                  <div className="skill-title">
+                    <span className="desktop-only">Databases</span>
+                    <span className="mobile-only">Project Management</span>
+                  </div>
                   <div className="skill-desc">
-                    ClickUp, Trello, Monday, Miro, MS Office, Jİra
+                    <span className="desktop-only">PostgreSQL</span>
+                    <span className="mobile-only">
+                      ClickUp, Trello, Monday, Miro, MS Office, Jira
+                    </span>
                   </div>
                 </div>
                 <div className="skill-item four">
+                  <div className="skill-title">
+                    <span className="desktop-only">Project Management</span>
+                    <span className="mobile-only">Databases</span>
+                  </div>
+                  <div className="skill-desc">
+                    <span className="desktop-only">
+                      ClickUp, Trello, Monday, Miro, MS Office, Jira
+                    </span>
+                    <span className="mobile-only">PostgreSQL</span>
+                  </div>
+                </div>
+                <div className="skill-item five">
                   <div className="skill-title">Frameworks & Methodologies</div>
                   <div className="skill-desc">
                     Agile, Waterfall, Kanban, Scrum, Scrumban
                   </div>
-                </div>
-                <div className="skill-item five">
-                  <div className="skill-title">Databases</div>
-                  <div className="skill-desc">PostgreSQL</div>
                 </div>
               </div>
             </div>
