@@ -1,4 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
+import useBodyScrollLock from "../../hooks/useBodyScrollLock";
 import Head from "next/head";
 import Header from "../../components/Header";
 import ProjectCardMini from "../../components/ProjectCardMini";
@@ -15,15 +16,7 @@ export default function Projects({ projects }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    if (selectedProject) {
-      const { overflow } = document.body.style;
-      document.body.style.overflow = "hidden";
-      return () => {
-        document.body.style.overflow = overflow;
-      };
-    }
-  }, [selectedProject]);
+  useBodyScrollLock(Boolean(selectedProject));
 
   const beginClose = useCallback(() => {
     setIsClosing(true);
@@ -118,7 +111,7 @@ export default function Projects({ projects }) {
                 <ProjectCardMini
                   project={project}
                   onClick={() => setSelectedProject(project)}
-                  key={project.slug}
+                  key={project.id}
                 />
               ))}
             </div>
@@ -162,9 +155,10 @@ export async function getStaticProps() {
   const filePath = path.join(process.cwd(), "public", "data.json");
   const json = JSON.parse(fs.readFileSync(filePath, "utf8"));
 
-  return {
-    props: {
-      projects: json.data,
-    },
-  };
+  const projects = json.data.map((p, idx) => ({
+    ...p,
+    id: `${p.title}-${idx}`,
+  }));
+
+  return { props: { projects } };
 }
