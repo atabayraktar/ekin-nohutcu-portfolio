@@ -59,18 +59,15 @@
     }
   }
 }
-
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0; /* top:0 right:0 bottom:0 left:0 */
   background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3000;
+  z-index: 10000;
+  pointer-events: auto;
   &.is-open {
     animation: overlayIn 300ms ease forwards;
   }
@@ -78,7 +75,7 @@
     animation: overlayOut 300ms ease forwards;
   }
   .modal-content {
-    position: relative;
+    position: relative; /* keeps the close button inside */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
     &.is-open {
       animation: fadeIn 300ms ease forwards;
@@ -136,34 +133,31 @@
     opacity: 0;
   }
 }
-html {
-  scrollbar-gutter: stable;
-}
 @include mobile {
   .modal-overlay {
     padding: 15px;
     justify-content: center;
-    .modal-content {
-      width: 100% !important;
-      max-width: none;
-      height: auto;
-      max-height: none;
-      overflow: visible;
-      -webkit-overflow-scrolling: touch;
-      box-shadow: none;
-      position: relative;
-      img[alt="Close icon"] {
-        position: absolute;
-        top: -30px;
-        right: 30px;
-        width: 18px;
-        height: 18px;
-        z-index: 2;
-      }
-    }
   }
+  .modal-overlay .modal-content {
+    width: 100% !important;
+    max-width: none;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: none;
+    position: relative;
+  }
+  .modal-overlay .modal-content img[alt="Close icon"] {
+    right: 0px;
+    width: 18px;
+    height: 18px;
+    z-index: 2;
+  }
+}
+@include mobile {
   .project-card-big {
-    width: calc(100% - 30px) !important;
+    width: 100% !important;
     box-sizing: border-box;
     padding: 12px;
     border-width: 1px;
@@ -215,4 +209,7 @@ html {
       }
     }
   }
+}
+html {
+  scrollbar-gutter: stable;
 }

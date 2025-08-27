@@ -1,11 +1,12 @@
 import { useEffect, useState, useCallback } from "react";
 import useBodyScrollLock from "../hooks/useBodyScrollLock";
 import Head from "next/head";
+import Link from "next/link";
 import Header from "../components/Header";
 import ProjectCardMini from "../components/ProjectCardMini";
 import ProjectCardBig from "../components/ProjectCardBig";
 import WiggleText from "../components/WiggleText";
-import Link from "next/link";
+import Portal from "../components/Portal";
 
 function useIsMobile(maxWidth = 768) {
   const [isMobile, setIsMobile] = useState(null);
@@ -270,23 +271,27 @@ export default function HomePage({ projects }) {
         }}
       ></a>
       {selectedProject && (
-        <div
-          className={`modal-overlay ${isClosing ? "is-closing" : "is-open"}`}
-          onClick={beginClose}
-        >
+        <Portal>
           <div
-            className={`modal-content ${isClosing ? "is-closing" : "is-open"}`}
-            onClick={(e) => e.stopPropagation()}
+            className={`modal-overlay ${isClosing ? "is-closing" : "is-open"}`}
+            onClick={beginClose}
           >
-            <img
-              style={{ cursor: "pointer" }}
-              onClick={beginClose}
-              src="/images/icons/close.png"
-              alt="Close icon"
-            />
-            <ProjectCardBig project={selectedProject} />
+            <div
+              className={`modal-content ${
+                isClosing ? "is-closing" : "is-open"
+              }`}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                style={{ cursor: "pointer" }}
+                onClick={beginClose}
+                src="/images/icons/close.png"
+                alt="Close icon"
+              />
+              <ProjectCardBig project={selectedProject} />
+            </div>
           </div>
-        </div>
+        </Portal>
       )}
     </>
   );
