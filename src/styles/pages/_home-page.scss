@@ -372,3 +372,50 @@
     }
   }
 }
+.home .intro-section .intro-text .wiggle {
+  display: inline-flex;
+  --t: 7%;
+  --nt: calc(var(--t) * -1);
+  --dur: 9s;
+  font: inherit;
+  text-transform: inherit;
+}
+.home .intro-section .intro-text .wiggle > span {
+  display: inline-block;
+  margin-inline: -1px;
+  animation: shakeX var(--dur) infinite cubic-bezier(0.45, 0, 0.55, 1);
+}
+.home .intro-section .intro-text .wiggle > span:nth-child(n) {
+  animation-duration: calc(var(--dur) + 2s);
+}
+.home .intro-section .intro-text .wiggle > span:nth-child(2n) {
+  animation-duration: calc(var(--dur) + 1s);
+}
+.home .intro-section .intro-text .wiggle > span:nth-child(3n) {
+  animation-duration: calc(var(--dur) + 0s);
+}
+@keyframes shakeX {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(var(--nt));
+  }
+  40% {
+    transform: translateX(var(--t));
+  }
+  60% {
+    transform: translateX(var(--nt));
+  }
+  80% {
+    transform: translateX(var(--t));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home .intro-section .intro-text .wiggle > span {
+    animation: none;
+  }
+}

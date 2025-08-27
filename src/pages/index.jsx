@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import ProjectCardMini from "../components/ProjectCardMini";
 import ProjectCardBig from "../components/ProjectCardBig";
+import WiggleText from "../components/WiggleText";
 
 function useIsMobile(maxWidth = 768) {
   const [isMobile, setIsMobile] = useState(null);
@@ -38,16 +39,10 @@ export default function HomePage({ projects }) {
 
   useEffect(() => {
     if (!selectedProject) return;
-    const body = document.body;
-    const prevOverflow = body.style.overflow;
-    const prevPaddingRight = body.style.paddingRight;
-    const scrollbarWidth =
-      window.innerWidth - document.documentElement.clientWidth;
-    if (scrollbarWidth > 0) body.style.paddingRight = `${scrollbarWidth}px`;
-    body.style.overflow = "hidden";
+    const { overflow } = document.body.style;
+    document.body.style.overflow = "hidden";
     return () => {
-      body.style.overflow = prevOverflow;
-      body.style.paddingRight = prevPaddingRight;
+      document.body.style.overflow = overflow;
     };
   }, [selectedProject]);
 
@@ -138,8 +133,8 @@ export default function HomePage({ projects }) {
             <Header />
             <div className="intro-section">
               <div className="intro-text">
-                Ekin is a <span>game developer</span> and
-                <span> project manager</span>.
+                Ekin is a <WiggleText text="game developer" /> and {""}
+                <WiggleText text="project manager" />.
               </div>
               <img
                 className="intro-image"
