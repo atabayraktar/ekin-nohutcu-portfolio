@@ -14,7 +14,6 @@ export default function Header() {
           <span>/</span>
           home
         </Link>
-
         <Link
           href="/projects"
           className={`header-text ${
@@ -24,7 +23,6 @@ export default function Header() {
           <span>/</span>
           projects
         </Link>
-
         <Link
           href="/about-me"
           className={`header-text ${

@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import ProjectCardMini from "../components/ProjectCardMini";
 import ProjectCardBig from "../components/ProjectCardBig";
 import WiggleText from "../components/WiggleText";
+import Link from "next/link";
 
 function useIsMobile(maxWidth = 768) {
   const [isMobile, setIsMobile] = useState(null);
@@ -142,12 +143,12 @@ export default function HomePage({ projects }) {
                   <span>#</span>projects
                   <span className="line"></span>
                 </div>
-                <a
+                <Link
                   className="section-header-right desktop-only"
                   href="/projects"
                 >
                   View all &#126;&#126;&gt;
-                </a>
+                </Link>
               </div>
               <div className="project-cards">
                 {isMobile !== null &&
@@ -161,9 +162,9 @@ export default function HomePage({ projects }) {
                       />
                     ))}
               </div>
-              <a className="view-all-mobile mobile-only" href="/projects">
+              <Link className="view-all-mobile mobile-only" href="/projects">
                 View all &#126;&#126;&gt;
-              </a>
+              </Link>
             </div>
             <div className="skills-section">
               <div className="section-header">
@@ -227,7 +228,7 @@ export default function HomePage({ projects }) {
                 a procedural modeling team.
               </div>
               <div className="about-me-read-more">
-                <a href="/about-me">Read more →</a>
+                <Link href="/about-me">Read more →</Link>
               </div>
             </div>
             <div className="contact-section">
