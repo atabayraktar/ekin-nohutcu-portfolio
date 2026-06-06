@@ -31,7 +31,7 @@ export default function ProjectCardBig({ project }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src="/images/icons/youtube.png" alt="YouTube icon" />
+                  <img src="/images/icons/youtube.webp" alt="YouTube icon" />
                 </a>
               </div>
             )}
@@ -42,7 +42,7 @@ export default function ProjectCardBig({ project }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src="/images/icons/appstore.png" alt="App Store icon" />
+                  <img src="/images/icons/appstore.webp" alt="App Store icon" />
                 </a>
               </div>
             )}
@@ -53,7 +53,7 @@ export default function ProjectCardBig({ project }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src="/images/icons/link.png" alt="Link icon" />
+                  <img src="/images/icons/link.webp" alt="Link icon" />
                 </a>
               </div>
             )}

@@ -38,6 +38,7 @@ export default function Projects({ projects }) {
     <>
       <Head>
         <title>Ekin Nohutçu | Projects</title>
+        <meta name="description" content="Browse Ekin Nohutçu's game development portfolio — Unity games, procedural modeling tools, hyper-casual titles, and graphics programming projects." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="page-wrapper">
@@ -55,21 +56,21 @@ export default function Projects({ projects }) {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/images/icons/github.png" alt="github icon" />
+              <img src="/images/icons/github.webp" alt="github icon" />
             </a>
             <a
               href="https://www.linkedin.com/in/ekinnohutcu/"
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/images/icons/linkedin.png" alt="linkedin icon" />
+              <img src="/images/icons/linkedin.webp" alt="linkedin icon" />
             </a>
             <a
               href="mailto:ekinnohutc@gmail.com"
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/images/icons/email.png" alt="email icon" />
+              <img src="/images/icons/email.webp" alt="email icon" />
             </a>
           </div>
           <div className="social-icons-mobile">
@@ -85,21 +86,21 @@ export default function Projects({ projects }) {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/images/icons/github.png" alt="github icon" />
+              <img src="/images/icons/github.webp" alt="github icon" />
             </a>
             <a
               href="https://www.linkedin.com/in/ekinnohutcu/"
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/images/icons/linkedin.png" alt="linkedin icon" />
+              <img src="/images/icons/linkedin.webp" alt="linkedin icon" />
             </a>
             <a
               href="mailto:ekinnohutc@gmail.com"
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/images/icons/email.png" alt="email icon" />
+              <img src="/images/icons/email.webp" alt="email icon" />
             </a>
           </div>
           <div className="content-wrapper">
@@ -107,6 +108,7 @@ export default function Projects({ projects }) {
             <div className="page-title">
               <span>/</span>projects
             </div>
+            <main style={{ width: "100%" }}>
             <div className="projects-container">
               {projects.map((project) => (
                 <ProjectCardMini
@@ -116,6 +118,7 @@ export default function Projects({ projects }) {
                 />
               ))}
             </div>
+            </main>
           </div>
         </div>
       </div>
@@ -142,7 +145,7 @@ export default function Projects({ projects }) {
               <img
                 style={{ cursor: "pointer" }}
                 onClick={beginClose}
-                src="/images/icons/close.png"
+                src="/images/icons/close.webp"
                 alt="Close icon"
               />
               <ProjectCardBig project={selectedProject} />

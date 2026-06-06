@@ -17,6 +17,7 @@ export default function AboutMe() {
     <>
       <Head>
         <title>Ekin Nohutçu | About Me</title>
+        <meta name="description" content="Game Developer with 7 years of professional experience in the gaming industry, including 2 years of leadership as head of a procedural modeling team. Passionate about graphics programming and Unity." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="page-wrapper">
@@ -34,21 +35,21 @@ export default function AboutMe() {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/images/icons/github.png" alt="github icon" />
+              <img src="/images/icons/github.webp" alt="github icon" />
             </a>
             <a
               href="https://www.linkedin.com/in/ekinnohutcu/"
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/images/icons/linkedin.png" alt="linkedin icon" />
+              <img src="/images/icons/linkedin.webp" alt="linkedin icon" />
             </a>
             <a
               href="mailto:ekinnohutc@gmail.com"
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/images/icons/email.png" alt="email icon" />
+              <img src="/images/icons/email.webp" alt="email icon" />
             </a>
           </div>
           <div className="social-icons-mobile">
@@ -64,21 +65,21 @@ export default function AboutMe() {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/images/icons/github.png" alt="github icon" />
+              <img src="/images/icons/github.webp" alt="github icon" />
             </a>
             <a
               href="https://www.linkedin.com/in/ekinnohutcu/"
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/images/icons/linkedin.png" alt="linkedin icon" />
+              <img src="/images/icons/linkedin.webp" alt="linkedin icon" />
             </a>
             <a
               href="mailto:ekinnohutc@gmail.com"
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/images/icons/email.png" alt="email icon" />
+              <img src="/images/icons/email.webp" alt="email icon" />
             </a>
           </div>
           <div className="content-wrapper">
@@ -86,6 +87,7 @@ export default function AboutMe() {
             <div className="page-title">
               <span>/</span>about-me
             </div>
+            <main style={{ width: "100%" }}>
             <div className="about-me-section">
               <div className="about-me-section-text">Hello, i’m Ekin!</div>
               <br />
@@ -240,6 +242,7 @@ export default function AboutMe() {
                 </div>
               </div>
             </div>
+            </main>
           </div>
         </div>
       </div>

@@ -61,6 +61,8 @@ export default function HomePage({ projects }) {
     <>
       <Head>
         <title>Ekin Nohutçu | Portfolio</title>
+        <meta name="description" content="Ekin Nohutçu – Game Developer and Project Manager with 7 years of experience in the gaming industry. Explore projects in Unity, procedural modeling, and graphics programming." />
+        <link rel="preload" as="image" href="/images/bg-imgs/bg-home.webp" fetchPriority="high" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="page-wrapper">
@@ -78,21 +80,21 @@ export default function HomePage({ projects }) {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/images/icons/github.png" alt="github icon" />
+              <img src="/images/icons/github.webp" alt="github icon" />
             </a>
             <a
               href="https://www.linkedin.com/in/ekinnohutcu/"
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/images/icons/linkedin.png" alt="linkedin icon" />
+              <img src="/images/icons/linkedin.webp" alt="linkedin icon" />
             </a>
             <a
               href="mailto:ekinnohutc@gmail.com"
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/images/icons/email.png" alt="email icon" />
+              <img src="/images/icons/email.webp" alt="email icon" />
             </a>
           </div>
           <div className="social-icons-mobile">
@@ -108,25 +110,26 @@ export default function HomePage({ projects }) {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/images/icons/github.png" alt="github icon" />
+              <img src="/images/icons/github.webp" alt="github icon" />
             </a>
             <a
               href="https://www.linkedin.com/in/ekinnohutcu/"
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/images/icons/linkedin.png" alt="linkedin icon" />
+              <img src="/images/icons/linkedin.webp" alt="linkedin icon" />
             </a>
             <a
               href="mailto:ekinnohutc@gmail.com"
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/images/icons/email.png" alt="email icon" />
+              <img src="/images/icons/email.webp" alt="email icon" />
             </a>
           </div>
           <div className="content-wrapper">
             <Header />
+            <main style={{ width: "100%" }}>
             <div className="intro-section">
               <div className="intro-text">
                 Ekin is a <WiggleText text="game developer" /> and {""}
@@ -134,8 +137,9 @@ export default function HomePage({ projects }) {
               </div>
               <img
                 className="intro-image"
-                src="/images/ekin-image.png"
+                src="/images/ekin-image.webp"
                 alt="ekin nohutçu img"
+                fetchPriority="high"
               />
             </div>
             <div className="projects-section">
@@ -249,7 +253,7 @@ export default function HomePage({ projects }) {
                   <div className="contact-msg-box">
                     <div className="contact-msg-box-title">Message me here</div>
                     <div className="contact-msg-box-info-container">
-                      <img src="/images/icons/email.png" alt="Contact" />
+                      <img src="/images/icons/email.webp" alt="Contact" />
                       <div className="contact-msg-box-info">
                         ekinnohutc@gmail.com
                       </div>
@@ -258,6 +262,7 @@ export default function HomePage({ projects }) {
                 </a>
               </div>
             </div>
+            </main>
           </div>
         </div>
       </div>
@@ -284,7 +289,7 @@ export default function HomePage({ projects }) {
               <img
                 style={{ cursor: "pointer" }}
                 onClick={beginClose}
-                src="/images/icons/close.png"
+                src="/images/icons/close.webp"
                 alt="Close icon"
               />
               <ProjectCardBig project={selectedProject} />

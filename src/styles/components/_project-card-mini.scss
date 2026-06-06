@@ -20,9 +20,11 @@
     width: 330px;
     height: 220px;
     display: block;
+    object-fit: cover;
     img {
       width: 330px;
       height: 220px;
+      object-fit: cover;
     }
     @include mobile {
       width: 100%;

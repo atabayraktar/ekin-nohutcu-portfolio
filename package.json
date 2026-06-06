@@ -15,9 +15,17 @@
     "react-dom": "latest",
     "sass": "latest"
   },
+  "browserslist": [
+    "chrome >= 90",
+    "edge >= 90",
+    "firefox >= 88",
+    "safari >= 14",
+    "not dead"
+  ],
   "devDependencies": {
     "@types/node": "latest",
     "@types/react": "latest",
-    "@types/react-dom": "latest"
+    "@types/react-dom": "latest",
+    "sharp": "^0.34.5"
   }
 }
