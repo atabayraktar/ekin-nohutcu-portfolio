@@ -2,8 +2,11 @@
   background-image: url("/images/bg-imgs/bg-projects.webp");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 100%;
+  background-size: 1365px auto;
   @include mobile {
+    background-image: none;
+  }
+  @include mobile-landscape {
     background-image: none;
   }
   .page-title {
@@ -40,6 +43,51 @@
           font-size: 15px;
           line-height: 1.15;
           padding: 12px 6px;
+        }
+        .project-card-mini-tech {
+          font-size: 11px;
+          line-height: 1.2;
+          padding: 6px 8px;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .projects {
+    background-image: none;
+    .page-title {
+      margin: 40px 0 50px 0;
+      font-size: 28px;
+    }
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-bottom: 150px;
+    }
+  }
+}
+
+@include mobile-landscape {
+  .projects {
+    .page-title {
+      margin: 20px 0 25px 0;
+      font-size: 22px;
+    }
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 60px;
+      .project-card-mini,
+      .projects-page-card {
+        box-sizing: border-box;
+        .project-card-mini-title {
+          font-size: 14px;
+          line-height: 1.15;
+          padding: 10px 6px;
         }
         .project-card-mini-tech {
           font-size: 11px;

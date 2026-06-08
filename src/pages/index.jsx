@@ -32,7 +32,7 @@ export default function HomePage({ projects }) {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isClosing, setIsClosing] = useState(false);
 
-  const isMobile = useIsMobile(768);
+  const isMobile = useIsMobile(767);
 
   useEffect(() => {
     const onScroll = () => setShowGoTop(window.scrollY > 100);

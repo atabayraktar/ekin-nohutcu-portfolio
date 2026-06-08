@@ -210,6 +210,24 @@
     }
   }
 }
+@include tablet {
+  .modal-overlay {
+    padding: 20px;
+  }
+  .modal-overlay .modal-content {
+    max-width: calc(100vw - 40px);
+  }
+  .project-card-big {
+    width: min(500px, calc(100vw - 80px));
+    box-sizing: border-box;
+    .project-card-big-container {
+      .project-card-big-image {
+        width: 100%;
+      }
+    }
+  }
+}
 html {
   scrollbar-gutter: stable;
+  scroll-behavior: smooth;
 }

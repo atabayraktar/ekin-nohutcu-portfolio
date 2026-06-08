@@ -2,8 +2,11 @@
   background-image: url("/images/bg-imgs/bg-about.webp");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 100%;
+  background-size: 1365px auto;
   @include mobile {
+    background-image: none;
+  }
+  @include mobile-landscape {
     background-image: none;
   }
 
@@ -242,6 +245,133 @@
       }
       .accomplishments-item-text {
         font-size: 13px;
+      }
+    }
+  }
+}
+
+// Education and accomplishment item hover glow
+.about-me .education-item,
+.about-me .accomplishments-item {
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.about-me .education-item:hover,
+.about-me .accomplishments-item:hover {
+  border-color: rgba(174, 133, 242, 0.65);
+  box-shadow: 0 0 14px rgba(174, 133, 242, 0.12);
+}
+
+@include tablet {
+  .about-me {
+    background-image: none;
+    .page-title {
+      margin: 40px 0 50px 0;
+      font-size: 28px;
+    }
+    .about-me-section {
+      margin-bottom: 70px;
+      .about-me-section-text {
+        max-width: 100%;
+      }
+    }
+    .skills-section {
+      margin-bottom: 70px;
+      .section-header {
+        width: 100%;
+        font-size: 26px;
+      }
+    }
+    .education-section {
+      margin-bottom: 70px;
+      .section-header {
+        width: 100%;
+        font-size: 26px;
+      }
+      .education-item {
+        width: auto;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+    }
+    .accomplishments-section {
+      margin-bottom: 150px;
+      .section-header {
+        width: 100%;
+        font-size: 26px;
+      }
+      .accomplishments-item {
+        width: auto;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+@include mobile-landscape {
+  .about-me {
+    .page-title {
+      margin: 20px 0 25px 0;
+      font-size: 22px;
+    }
+    .about-me-section {
+      margin-bottom: 30px;
+      .about-me-section-text {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+    .skills-section {
+      padding-top: 25px;
+      margin-bottom: 30px;
+      .section-header {
+        width: 100%;
+        font-size: 18px;
+      }
+      .skills-container {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: 1.27fr 1fr;
+        .skill-item,
+        .skill-item.one,
+        .skill-item.two,
+        .skill-item.three,
+        .skill-item.four,
+        .skill-item.five {
+          width: auto !important;
+          height: auto;
+          min-height: 80px;
+        }
+      }
+    }
+    .education-section {
+      margin-bottom: 30px;
+      .section-header {
+        width: 100%;
+        font-size: 18px;
+      }
+      .education-item {
+        width: auto;
+        max-width: 100%;
+        box-sizing: border-box;
+        font-size: 13px;
+        text-align: center;
+      }
+    }
+    .accomplishments-section {
+      margin-bottom: 60px;
+      .section-header {
+        width: 100%;
+        font-size: 18px;
+      }
+      .accomplishments-item {
+        width: auto;
+        max-width: 100%;
+        box-sizing: border-box;
+        font-size: 13px;
+        text-align: center;
+        margin-bottom: 20px;
       }
     }
   }

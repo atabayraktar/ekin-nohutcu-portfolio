@@ -198,3 +198,151 @@ a {
 .page-wrapper .bg-container .social-icons-mobile::before {
   pointer-events: none;
 }
+
+@include tablet {
+  .page-wrapper .bg-container .social-icons-desktop {
+    display: none;
+  }
+  .page-wrapper .bg-container .social-icons-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &::before {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 191px;
+      background-color: #abb2bf;
+      margin: 0 auto 8px auto;
+      pointer-events: none;
+    }
+    a {
+      display: inline-block;
+      img {
+        width: 32px;
+        height: 32px;
+        transition: transform 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+  .page-wrapper .bg-container .content-wrapper {
+    padding: 0 20px 0 55px;
+    max-width: none;
+  }
+}
+
+@include mobile-landscape {
+  .page-wrapper .bg-container .social-icons-desktop {
+    display: none;
+  }
+  .page-wrapper .bg-container .social-icons-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &::before {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 70px;
+      background-color: #abb2bf;
+      margin: 0 auto 8px auto;
+      pointer-events: none;
+    }
+    a {
+      display: inline-block;
+      img {
+        width: 28px;
+        height: 28px;
+        transition: transform 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+  .page-wrapper .bg-container .content-wrapper {
+    padding: 0 20px 0 55px;
+    max-width: none;
+  }
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: block !important;
+  }
+}
+
+// ── Visual enhancements ─────────────────────────────────────────────
+
+::selection {
+  background-color: rgba(174, 133, 242, 0.28);
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #2a2d2d;
+}
+::-webkit-scrollbar-thumb {
+  background: #ae85f2;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c4a5f5;
+}
+
+// Scroll reveal — added by JS to targets before IntersectionObserver fires
+.will-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+}
+.will-reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-header.will-reveal,
+.about-me-text.will-reveal,
+.about-me-section-text.will-reveal,
+.contact-text.will-reveal,
+.education-item.will-reveal,
+.accomplishments-item.will-reveal,
+.page-title.will-reveal {
+  transition: opacity 0.5s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+// Skill items carry hover transitions here so they survive after reveal
+.skill-item.will-reveal {
+  transition: opacity 0.5s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1),
+    border-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+// Decorative line slides in from left after section header fades in
+.section-header .line {
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1) 0.28s;
+}
+.section-header.in-view .line {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .will-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .section-header .line {
+    transform: scaleX(1) !important;
+    transition: none !important;
+  }
+}

@@ -11,6 +11,7 @@
   &:hover {
     border: 1px solid #ae85f2;
     transform: scale(1.05);
+    box-shadow: 0 4px 22px rgba(174, 133, 242, 0.18);
     .project-card-mini-tech,
     .project-card-mini-title {
       border-color: #ae85f2;
@@ -27,6 +28,22 @@
       object-fit: cover;
     }
     @include mobile {
+      width: 100%;
+      height: auto;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    @include tablet {
+      width: 100%;
+      height: auto;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    @include mobile-landscape {
       width: 100%;
       height: auto;
       img {
