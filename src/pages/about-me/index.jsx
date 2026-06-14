@@ -17,7 +17,19 @@ export default function AboutMe() {
     <>
       <Head>
         <title>Ekin Nohutçu | About Me</title>
-        <meta name="description" content="Game Developer with 7 years of professional experience in the gaming industry, including 2 years of leadership as head of a procedural modeling team. Passionate about graphics programming and Unity." />
+        <meta name="description" content="Game Developer with 7 years of professional experience in the gaming industry, including 2 years of leadership as head of a procedural modeling team. Expert in Unity, C#, Houdini, shader development, and procedural content generation." />
+        <meta name="keywords" content="Ekin Nohutçu, game developer, Unity developer, procedural modeling team lead, graphics programmer, C# Unity, Houdini procedural, shader development, Marmara University, computer engineering, game industry professional, procedural content generation" />
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content="https://www.ekinnohutcu.com/about-me" />
+        <meta property="og:title" content="Ekin Nohutçu – Game Developer & Procedural Modeling Expert" />
+        <meta property="og:description" content="7 years of game development experience including team leadership, graphics programming, procedural modeling, and shader development with Unity and Houdini." />
+        <meta property="og:image" content="https://www.ekinnohutcu.com/images/ekin-image.webp" />
+        <meta property="og:site_name" content="Ekin Nohutçu Portfolio" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ekin Nohutçu – Game Developer & Procedural Modeling Expert" />
+        <meta name="twitter:description" content="7 years of game development experience including team leadership, graphics programming, and procedural modeling with Unity and Houdini." />
+        <meta name="twitter:image" content="https://www.ekinnohutcu.com/images/ekin-image.webp" />
+        <link rel="canonical" href="https://www.ekinnohutcu.com/about-me" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="page-wrapper">

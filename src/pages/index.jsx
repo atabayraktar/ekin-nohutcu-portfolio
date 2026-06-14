@@ -61,7 +61,44 @@ export default function HomePage({ projects }) {
     <>
       <Head>
         <title>Ekin Nohutçu | Portfolio</title>
-        <meta name="description" content="Ekin Nohutçu – Game Developer and Project Manager with 7 years of experience in the gaming industry. Explore projects in Unity, procedural modeling, and graphics programming." />
+        <meta name="description" content="Ekin Nohutçu – Game Developer and Project Manager with 7 years of experience in the gaming industry. Explore projects in Unity, procedural modeling, graphics programming, and shader development." />
+        <meta name="keywords" content="Ekin Nohutçu, game developer, Unity developer, project manager, procedural modeling, graphics programming, C# developer, shader development, Houdini, Blender, Unity3D, procedural content generation, game development portfolio, hyper-casual games, technical game developer" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ekinnohutcu.com/" />
+        <meta property="og:title" content="Ekin Nohutçu | Game Developer & Project Manager" />
+        <meta property="og:description" content="Game Developer and Project Manager with 7 years of experience in the gaming industry. Specializing in Unity, procedural modeling, graphics programming, and shader development." />
+        <meta property="og:image" content="https://www.ekinnohutcu.com/images/ekin-image.webp" />
+        <meta property="og:site_name" content="Ekin Nohutçu Portfolio" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ekin Nohutçu | Game Developer & Project Manager" />
+        <meta name="twitter:description" content="Game Developer and Project Manager with 7 years of experience in the gaming industry. Specializing in Unity, procedural modeling, and graphics programming." />
+        <meta name="twitter:image" content="https://www.ekinnohutcu.com/images/ekin-image.webp" />
+        <link rel="canonical" href="https://www.ekinnohutcu.com/" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Ekin Nohutçu",
+              "url": "https://www.ekinnohutcu.com/",
+              "image": "https://www.ekinnohutcu.com/images/ekin-image.webp",
+              "jobTitle": "Game Developer & Project Manager",
+              "description": "Game Developer with 7 years of professional experience in the gaming industry, including 2 years of leadership as the head of a procedural modeling team. Passionate about graphics programming and Unity.",
+              "email": "ekinnohutc@gmail.com",
+              "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "Marmara University",
+                "department": "Computer Engineering"
+              },
+              "knowsAbout": ["Unity3D", "C#", "Procedural Modeling", "Graphics Programming", "Houdini", "Blender", "Shader Development", "Game Development", "Project Management", "Agile", "Scrum"],
+              "sameAs": [
+                "https://github.com/ekinnohutcu",
+                "https://www.linkedin.com/in/ekinnohutcu/"
+              ]
+            })
+          }}
+        />
         <link rel="preload" as="image" href="/images/bg-imgs/bg-home.webp" fetchPriority="high" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

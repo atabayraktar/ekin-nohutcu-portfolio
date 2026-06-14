@@ -38,7 +38,19 @@ export default function Projects({ projects }) {
     <>
       <Head>
         <title>Ekin Nohutçu | Projects</title>
-        <meta name="description" content="Browse Ekin Nohutçu's game development portfolio — Unity games, procedural modeling tools, hyper-casual titles, and graphics programming projects." />
+        <meta name="description" content="Browse Ekin Nohutçu's game development portfolio — Unity games, procedural modeling tools, hyper-casual titles, graphics programming, and shader projects." />
+        <meta name="keywords" content="Ekin Nohutçu projects, Unity game projects, procedural modeling tools, hyper-casual game development, graphics programming projects, C# Unity portfolio, shader projects, Houdini tools, game developer portfolio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ekinnohutcu.com/projects" />
+        <meta property="og:title" content="Ekin Nohutçu | Game Development Projects" />
+        <meta property="og:description" content="Unity games, procedural modeling tools, hyper-casual titles, and graphics programming projects by Ekin Nohutçu." />
+        <meta property="og:image" content="https://www.ekinnohutcu.com/images/ekin-image.webp" />
+        <meta property="og:site_name" content="Ekin Nohutçu Portfolio" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ekin Nohutçu | Game Development Projects" />
+        <meta name="twitter:description" content="Unity games, procedural modeling tools, hyper-casual titles, and graphics programming projects by Ekin Nohutçu." />
+        <meta name="twitter:image" content="https://www.ekinnohutcu.com/images/ekin-image.webp" />
+        <link rel="canonical" href="https://www.ekinnohutcu.com/projects" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="page-wrapper">
